@@ -1,0 +1,34 @@
+--- 
+ - hosts: all
+   become: true
+   tasks : 
+   - name: add user user10
+     user:
+       name: user10
+       shell: /bin/bash
+       home: /home/user10
+       uid: 1010
+   - name: add user user20     
+     user:
+       name: user20
+       shell: /bin/bash
+       home: /home/user20
+       uid: 1020
+   - name: add user user30
+     user:
+       name: user30
+       shell: /bin/bash
+       home: /home/user30
+       uid: 1030   
+   - name: add user user40
+     user: 
+       name: user40
+       shell: /bin/bash
+       home: /home/user40
+       uid: 1040
+   - name: add group with name user40     
+     group:
+       name: user40
+       state: present
+       gid: 1040
+
