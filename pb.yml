@@ -31,4 +31,16 @@
        name: user40
        state: present
        gid: 1040
+   - name: add user user50
+     user: 
+       name: user50
+       shell: /bin/bash
+       home: /home/user40
+       uid: 1040
+   - name: add user user60
+     user: 
+       name: user60
+       shell: /bin/bash
+       home: /home/user40
+       uid: 1040
 
